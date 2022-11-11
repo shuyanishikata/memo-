@@ -1,0 +1,264 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 32px;
+  background-image: url(https://gsacademy.jp/assets/images/item/base_sapporo_img02.jpg);
+  background-size:100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+
+.play-field{
+  width: 400px;
+  margin:0 auto;
+  background-color: rgb(248, 227, 227);
+  padding:20px 0 0;
+  font-family:  'M PLUS Rounded 1c', sans-serif;
+  font-size: 25px;
+}
+
+header {
+  background-color: darkblue;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  color: #fff;
+  margin:10px 0;
+  height: 40px;
+  font-size: 30px;
+  padding:5px;
+}
+
+.header-text{
+  margin:5px 0;
+}
+
+main {
+  border-bottom: 1px solid #ccc;
+}
+
+
+footer {
+  background-color: darkblue;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  color: #fff;
+  height: 20px;
+}
+
+.問題枠{
+  margin:20px;
+  display: table;
+  width: 360px;
+  height: 200px;
+  background-color: #f9f1a2;
+  height:150px;
+  border: 2px solid rgb(137, 94, 0);
+}
+
+#quest{
+  margin:auto 5px;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+  text-align: center;
+}
+
+/* p {
+  font-size: 100%;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  height: 100px;
+} */
+
+.選択肢表{
+  margin:0 auto;
+  width: 250px;
+  border:  rgb(248, 227, 227) 4px solid;
+  font-size: 20px;
+}
+
+.選択肢表左{
+  width: 30px;
+  text-align: center;
+  background-color: rgb(0, 126, 116);
+  color:#FFF;
+  height: 30px;
+  line-height: 30px;
+  border:  rgb(248, 227, 227) 4px solid;
+}
+
+.選択肢表右{
+  width: 200px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  border:  rgb(248, 227, 227) 4px solid;
+  background-color: rgb(219, 255, 168);
+}
+
+label:hover{
+  cursor: pointer;
+}
+
+.選択肢ラベル{
+  display: block;
+  width: 200px;
+}
+
+input[type=radio].hide-radiobtn{
+    display: none;
+}
+
+ul {
+  padding: 0;
+  border-top: 1px solid #000000;
+  display: table;
+  /* 定義 */
+  table-layout: fixed;
+  width: 100%;
+}
+
+li {
+  text-align: center;
+  list-style-type: none;
+  border: 1px solid #666;
+  background-color: #FFF;
+  display: table-cell;
+  /* 定義 */
+  cursor: pointer;
+}
+
+li:hover {
+  background: #0066CC;
+  color: #fff;
+}
+textarea{
+  margin: 3%;
+  width: 30%;
+  height: 30px;
+  font-size:50%;
+  box-shadow: 3px 3px 3px 3px #555;
+}
+
+.reset a{
+  text-align: center;
+  background: rgb(248, 244, 165);
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  max-width: 220px;
+  padding: 10px 25px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  text-decoration:none;
+  font-weight: bold;
+}
+
+.reset a:before{
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #999;
+}
+
+.reset a:hover{
+  background: #313131;
+  color: #FFF;
+  cursor:pointer;
+}
+
+.menu a{
+  text-align: center;
+  background: rgb(248, 244, 165);
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  max-width: 220px;
+  padding: 10px 25px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+  text-decoration:none;
+  font-weight: bold;
+}
+
+.menu a:before{
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #999;
+}
+
+.menu a:hover{
+  background: #313131;
+  color: #FFF;
+  cursor:pointer;
+}
+
+.kaishi a{
+  text-align: center;
+  background: rgb(248, 244, 165);
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  max-width: 220px;
+  padding: 10px 25px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+  text-decoration:none;
+  font-weight: bold;
+}
+
+.kaishi a:before{
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #999;
+}
+
+.kaishi a:hover{
+  background: #313131;
+  color: #FFF;
+  cursor:pointer;
+}
+
+
+#list{
+  text-align: center;
+  font-size: 15px;
+  margin: 10px auto;
+  border:  #707070 1px solid;
+  width: 250px;
+}
+
+.表左{
+  border:  #707070 1px solid;
+  height: 20px;
+  line-height: 20px;
+  background-color: rgb(237, 255, 212);
+}
+
+.表右{
+  border:  #707070 1px solid;
+  height: 20px;
+  line-height: 20px;
+  background-color: rgb(237, 255, 212);
+}
+
+.タイトル行{
+  background-color: rgb(244, 244, 244);
+}

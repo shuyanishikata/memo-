@@ -1,0 +1,305 @@
+body{
+    background-image: url(パチスロ店内.jpg);
+    background-size:100%;
+}
+
+.play-field{
+    width: 400px;
+    margin:0 auto;
+    background-color: rgb(248, 227, 227);
+    padding:20px 0;
+}
+
+
+
+.画面枠{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 360px;
+    height: 200px;
+    background-color: #fa6b55;
+    height:150px;
+    line-height:150px;
+    border: 5px solid rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+.画面枠:hover{
+    cursor:pointer;
+}
+
+.画面{
+    margin: 0 ;
+    text-align: center;
+    color:rgb(64, 3, 3);
+    font-size: 30px;
+    animation: blink-fast .3s linear infinite;
+}
+
+@keyframes blink-fast {
+    0% {
+        opacity: 0;
+      }
+    
+      20% {
+        opacity: 1;
+    }
+}
+
+.banner {
+    display: block;
+    height: 60px; 
+    width: 360px; 
+    background-color: orange;
+    margin:10px auto;
+    overflow: hidden; 
+    padding: 0;
+}
+
+.banner__content {
+    display: inline-block;
+    color: rgb(115, 2, 2); 
+    font-weight: bold;
+    padding-left: 100%;
+    white-space: nowrap; 
+    height: 60px;
+    animation: animate-banner 3.5s linear infinite; /* アニメーションを設定 */
+}
+.banner__content > * {
+    display: inline-block; 
+}
+@keyframes animate-banner {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+
+.リール{
+    display: flex;
+    margin: 0 auto;
+    height: 60px;
+    padding: 10px 0;
+    width: 360px;
+}
+
+.リール１{
+    width: 60px;
+    height: auto;
+    margin: 0 30px;
+}
+
+.リール２{
+    width: 60px;
+    height: auto;
+    margin: 0 30px;
+}
+
+.リール３{
+    width: 60px;
+    height: auto;
+    margin: 0 30px;
+}
+
+
+
+.あだな表示{
+    display: flex;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 360px;
+    height: 20px;
+    list-style: none;
+}
+
+.あだな１{
+    width: 90px;
+    height: auto;
+    margin: 0 15px 20px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.あだな２{
+    width: 90px;
+    height: auto;
+    margin: 0 15px 20px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.あだな３{
+    width: 90px;
+    height: auto;
+    margin: 0 15px 20px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.スタートボタン内{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 214px;
+    background-color: #eb6100;
+    color:#fff;
+    cursor: pointer;
+    border-radius: 5vh;
+    border-bottom: 5px solid #b84c00;
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+.スタートボタン内:hover{
+    background: #e06208;
+    margin-top: 3px;
+    border-bottom: 2px solid #b84c00;
+}
+
+.順番表示{
+    display: flex;
+    margin: 10px 25px 0;
+    text-align: center;
+    width: 360px;
+    list-style: none;
+}
+
+.順番１{
+    width: 50px;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.順番２{
+    width: 50px;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.順番３{
+    width: 50px;
+    margin: 0 20px;
+    text-align: center;
+}
+
+
+.ストップボタン{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    width: 270px;
+}
+
+.ストップボタン１{
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-color: black;
+    margin: 0 20px 20px;
+    cursor: pointer;
+    line-height:50px;
+}
+
+
+.ストップボタン２{
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-color: black;
+    margin: 0 20px 20px;
+    cursor: pointer;
+    line-height:50px;
+}
+
+.ストップボタン３{
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-color: black;
+    margin: 0 20px 20px;
+    cursor: pointer;
+    line-height:50px;
+}
+
+
+.reload{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 214px;
+    background-color: #eb6100;
+    color:#fff;
+    cursor: pointer;
+    border-radius: 5vh;
+    border-bottom: 5px solid #b84c00;
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+.reload:hover{
+    background: #e06208;
+    margin-top: 3px;
+    border-bottom: 2px solid #b84c00;
+}
+
+.sukima{
+    height: 10px;
+}
+
+.スタートボタン内2{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 214px;
+    background-color: #eb6100;
+    color:#fff;
+    cursor: pointer;
+    border-radius: 5vh;
+    border-bottom: 5px solid #b84c00;
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+.スタートボタン内2:hover{
+    background: #e06208;
+    margin-top: 3px;
+    border-bottom: 2px solid #b84c00;
+}
+
+
+.table{
+    margin:0 auto;
+    height: 50px;
+    font-size: 15px;
+    border: #707070 1 solid;
+}
+
+.行{
+    height: 5px;
+    border: #707070 1 solid;
+}
+
+td{
+    padding:0 5px;
+    border: #707070 1 solid;
+}
+
+table{
+    margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+border-collapse: collapse;
+border-spacing: 0;
+/* display: block; */
+line-height: 1;
+list-style: none;
+quotes: none;
+content: '';
+content: none;
+}

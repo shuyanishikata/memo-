@@ -1,0 +1,245 @@
+body{
+    background-color:rgb(82, 204, 251) ;
+}
+
+.field{
+    width: 400px;
+    margin:0 auto;
+    padding:20px 0;
+}
+
+.title{
+    text-align: center;
+    color:white;
+    font-weight: bold;
+    line-height: 5px;
+    font-size:25px;
+}
+
+.sub-title{
+    text-align: center;
+    color:rgb(254, 255, 209);
+    line-height: 5px;
+}
+
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .6s;
+  }
+  .popup.is-show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .popup-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 50px;
+    background-color: #fff;
+    z-index: 2;
+  }
+  .popup-inner img {
+    width: 100%;
+  }
+  .close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .bg-black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+
+.説明 a {
+    background: #eee;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    max-width: 220px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+.説明 a:before {
+    position: relative;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 8px;
+    color: #999;
+}
+.説明 a:hover {
+    background: #313131;
+    color: #FFF;
+    cursor:pointer;
+}
+
+
+.集合写真枠{
+    width: 360px;
+    margin: 10px auto;
+    display:flex;
+}
+
+
+/* 画像ホバー */
+.hover_text {
+    font-size: 20px;
+    width: 360px;
+    height: 270px;
+    align-items: center; /* テキストの中央揃え */
+    background: black; /* マスクの色(黒の50%) */
+    color: #fff; /* テキストの色 */
+    display: flex; /* テキストの中央揃え */
+    justify-content: center; /* テキストの中央揃え */
+    opacity: 0; /* 最初は透明(非表示) */
+    position: absolute;
+    transition: opacity .6s ease; /* ゆっくりopacityのみへ変化させる */
+    text-decoration:none;
+}
+  .hover_text:hover {
+    opacity: .7; /* hoverしたら透過しない(表示させる) */
+  }
+  .hover_text p {
+    width: 100%; /* テキストを横幅いっぱいにならないようにする */
+  }    
+
+
+.loop_wrap {
+    display: flex;
+    height: 70px;
+    overflow: hidden;
+    margin:10px 0;
+}
+  
+.loop_wrap img {
+    width: auto;
+    height: 100%;
+}
+
+@keyframes loop {
+    0% {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+  
+@keyframes loop2 {
+    0% {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-200%);
+    }
+}
+
+.loop_wrap img:first-child {
+    animation: loop 50s -25s linear infinite;
+}
+  
+.loop_wrap img:last-child {
+    animation: loop2 50s linear infinite;
+}
+
+
+
+
+.button_slot a {
+    background: rgb(251, 200, 143);
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    max-width: 220px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    text-decoration:none;
+    font-weight: bold;
+}
+.button_slot a:before {
+    position: relative;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 8px;
+    color: #999;
+}
+.button_slot a:hover {
+    background: #313131;
+    color: #FFF;
+    cursor:pointer;
+}
+
+.button_quiz a {
+  background: rgb(212, 248, 165);
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  max-width: 220px;
+  padding: 10px 25px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+  text-decoration:none;
+  font-weight: bold;
+}
+.button_quiz a:before {
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #999;
+}
+.button_quiz a:hover {
+  background: #313131;
+  color: #FFF;
+  cursor:pointer;
+}
+
+.集合写真{
+    width: 360px;
+    margin: 0 auto;
+}
+
+
+
+
+ 

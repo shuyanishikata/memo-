@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/sample.css">
+    <title>札幌クイズ</title>
+</head>
+
+<body>
+<section class="play-field" id="play-field">
+    <div class="kaishi"><a>クイズを始める</a></div>
+    <div id="play-field2">
+    <header>
+        <h1 class="header-text"><span class="出題数">クイズ練習</span>問目(全5問)　正解:<span class="正解数">複数</span></h1>
+    </header>
+    <main>
+        <div class="問題枠"><div id="quest">ここに問題が出題されます</div></div>
+        <table class="選択肢表">
+            <tr>
+                <td class="選択肢表左">１</td>
+                <td class="選択肢表右"><label class="選択肢ラベル"><input type="radio" name="toi" value="1" class="hide-radiobtn"><span id="toi1">選択肢１</span></label></td>
+            </tr>
+            <tr>
+                <td class="選択肢表左">２</td>
+                <td class="選択肢表右"><label class="選択肢ラベル"><input type="radio" name="toi" value="2" class="hide-radiobtn"><span id="toi2">選択肢２</span></label></td>
+            </tr>
+            <tr>
+                <td class="選択肢表左">３</td>
+                <td class="選択肢表右"><label class="選択肢ラベル"><input type="radio" name="toi" value="3" class="hide-radiobtn"><span id="toi3">選択肢３</span></label></td>
+            </tr>
+
+        </table>
+        
+
+        <div class="reset"><a>リセット</a></div>
+        <div class="menu"><a href="index.html">メニューに戻る</a></div>
+        <table id="list">
+            <tr>
+                <th class="表左 タイトル行">回目</th>
+                <th class="表右 タイトル行">正解数</th>
+            </tr>
+
+        </table>
+    </main>
+    </div>
+    <footer></footer>
+</section>
+
+<audio src="lovelyflower.mp3" id="introduction"></audio>
+<audio src="Quiz-Correct_Answer02-2.mp3" id="pinpon"></audio>
+<audio src="Quiz-Wrong_Buzzer02-3.mp3" id="bubu"></audio>
+<script>
+
+let next = document.getElementById('play-field2');
+// 現在の display プロパティの値を保持
+const displayOriginal = next.style.display;
+
+// none に設定して非表示
+next.style.display = 'none';
+
+$(".kaishi").on("click", function () {
+    $("#introduction").get(0).play();
+    next.style.display = displayOriginal;
+    $('.kaishi').fadeOut();
+})
+
+
+    const qs = [
+        ["最年少なのは誰？","とうま", "ちゃんりな", "よね",1],
+        ["水族館が好きなのは？","ぴーや", "すずね", "もりくん",2],
+        ["中学校の先生だったのは誰？","ちゃんくぼ", "なべさん", "梅king",3],
+        ["留学について相談するなら？","いっしー", "サガット", "イソノカツオ",2],
+        ["北海道出身なのは？","もりくん", "まっきー", "ちゃんくぼ",1],
+        
+    ]; 
+
+
+
+
+    //1.最初の問題文＆回答選択肢＆回答値を設定
+
+    kaisu=1;
+
+    i=0;
+    seikai=0;
+    function q(i){
+    $("#quest").html(qs[i][0]);
+    $("#toi1").html(qs[i][1]);
+    $("#toi2").html(qs[i][2]);
+    $("#toi3").html(qs[i][3]);
+    $(".正解数").html(seikai);
+    $(".出題数").html(i+1);
+    }
+    
+    q(i);
+
+
+    //2.ラジオボタンをクリックしたらイベント発生！(クリックイベント)
+
+    $("[name=toi]").on("click",function(){
+        if($(this).val()==qs[i][4]){
+            $("#pinpon").get(0).play();
+            alert("正解！");
+            seikai++;
+        }else{
+            $("#bubu").get(0).play();
+            alert("間違い！");
+        }
+        if(i<4){
+        i++
+        q(i);
+        }
+        else{
+            $(".正解数").html(seikai);
+            alert("終了！");
+            alert("リセットボタンを押してね");
+            localStorage.setItem(kaisu,seikai);
+            const html =`<tr><td class="表左">${kaisu}</td><td class="表右">${seikai}</td></tr>`;
+            $("#list").append(html);
+            var random = Math.floor(Math.random() * 3) + 1
+            console.log(random);
+            if(random=1){
+                qs[3] = ["学生時代よさこい経験者は？","すずね", "サガット", "ぴーや",3]
+                qs[1] = ["Macユーザーは？","なべさん", "イソノカツオ", "ちゃんりな",1]
+            
+            }
+            if(random=2){
+                qs[2] = ["@87Kzk 誰のTwitterアカウント？","サガット", "なべさん", "いっしー",3]
+                qs[0] = ["８歳まで赤羽にいたのは？","すずね", "ちゃんりな", "よね",2]
+            }
+            if(random=3){
+                qs[4] = ["ラグビー経験者は？","とうま", "ちゃんくぼ", "まっきー",1]
+                };
+            console.log(qs);
+        }}
+    );
+
+
+    $(".reset").on("click",function(){
+        kaisu++;   
+        i=0;
+        seikai=0;
+        q(i)
+    })
+
+
+    $(".menu").on("click",function(){
+      
+    
+    })
+
+    // for (let i = 0; i<5;i++){  
+    //     // q(i);
+    //     // s(i);
+    // }
+
+    
+    </script>
+</body>
+
+</html>

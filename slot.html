@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sapporo UNIT5th Slot</title>
+</head>
+<body>
+<section class="play-field">
+    <div class="画面枠" id="画面枠">
+    <h1 class="画面" id="画面">がんばれ！</h1>
+    </div>
+
+    <div class="banner">
+        <div class="banner__content">
+        <p class="メッセージ" id="メッセージ">毎週土曜はEZO HUBへGO!!!　　　　　　　　　毎週土曜はEZO HUBへGO!!!</p>
+    </div>
+    </div>
+
+    <div class="リール">
+    <a href="#" target="_blank" id="pdf1"><img src="ラッキーセブン色違い.png" class="リール１" id="リール１"></img></a>
+    <a href="#" target="_blank" id="pdf2"><img src="ラッキーセブン色違い.png" class="リール２" id="リール２"></img></a> 
+    <a href="#" target="_blank" id="pdf3"><img src="ラッキーセブン色違い.png" class="リール３" id="リール２"></img></a>
+</div>
+    
+
+<ul class="あだな表示">
+    <li class="あだな１" id="あだな１">誰かな？？？</li>
+    <li class="あだな２" id="あだな２">誰かな？？？</li>
+    <li class="あだな３" id="あだな３">誰かな？？？</li>
+</ul>
+
+
+    <div class="スタートボタン">
+    <h1 class="スタートボタン内">スタート</h1>
+    </div>
+
+    <ul class="順番表示">
+        <li class="順番１">①</li>
+        <li class="順番２">②</li>
+        <li class="順番３">③</li>
+    </ul>
+
+    <div class="ストップボタン">
+    <h1 class="ストップボタン１">●</h1>
+    <h1 class="ストップボタン２">●</h1>
+    <h1 class="ストップボタン３">●</h1>
+    </div>
+
+ 
+    
+    <input type="button" value="リセット"  class="reload" >
+
+    <div class="sukima">　　</div>
+
+    <div>
+        <h4 class="スタートボタン内2">メニューに戻る</h4>
+        </div>
+
+    <table class="table">
+        <tr class="行">
+            <td>プレイ回数</td>
+            <td><h6 class="playcounta" id="playcounta">0</h6></td>
+        <!-- </tr>
+        <tr class="行"> -->
+            <td>いっしー</td>
+            <td><h6 class="S01counta" id="S01counta">0</h6></td>
+        </tr>
+        <tr class="行">
+            <td>梅king</td>
+            <td><h6 class="S02counta" id="S02counta">0</h6></td>
+        <!-- </tr>
+        <tr class="行"> -->
+            <td>ちゃんくぼ</td>
+            <td><h6 class="S03counta" id="S03counta">0</h6></td>
+        </tr>
+        <tr class="行">
+            <td>サガット</td>
+            <td><h6 class="S04counta" id="S04counta">0</h6></td>
+        <!-- </tr>
+        <tr class="行"> -->
+            <td>ちゃんりな</td>
+            <td><h6 class="S05counta" id="S05counta">0</h6></td>
+        </tr>
+        <tr class="行">
+            <td>ぴーや</td>
+            <td><h6 class="S06counta" id="S06counta">0</h6></td>
+        <!-- </tr>
+        <tr class="行"> -->
+            <td>とうま</td>
+            <td><h6 class="S08counta" id="S08counta">0</h6></td>
+        </tr>
+        <tr class="行">
+            <td>まっきー</td>
+            <td><h6 class="S09counta" id="S09counta">0</h6></td>
+        <!-- </tr>
+        <tr class="行"> -->
+            <td>もりくん</td>
+            <td><h6 class="S10counta" id="S10counta">0</h6></td>
+        </tr>
+        <tr class="行">
+            <td>なべさん</td>
+            <td><h6 class="S11counta" id="S11counta">0</h6></td>
+        <!-- </tr>
+        <tr class="行"> -->
+            <td>すずね</td>
+            <td><h6 class="S12counta" id="S12counta">0</h6></td>
+        </tr>
+        <tr class="行">
+            <td>イソノカツオ</td>
+            <td><h6 class="S13counta" id="S13counta">0</h6></td>
+        <!-- </tr>
+        <tr class="行"> -->
+            <td>よね</td>
+            <td><h6 class="S14counta" id="S14counta">0</h6></td>
+        </tr>
+
+    </table>
+
+</section>
+
+    <audio src="garo_se08.mp3" id="play-startbutton"></audio>
+    <audio src="キャンセル6.mp3" id="play-stopbutton"></audio>
+    <audio src="garo_se01_garohoryu.mp3" id="play-reloadbutton"></audio>
+    <audio src="picopicomarch.mp3" id="play-bgm"></audio>
+    <audio src="garo_se02_pfognavi.mp3" id="reach"></audio>
+    <audio src="クイズ不正解1.mp3" id="non-reach"></audio>
+    <audio src="garo_se05_gzanbaken.mp3" id="congratulation"></audio>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="slot.js"></script>
+</body>
+</html>
+
